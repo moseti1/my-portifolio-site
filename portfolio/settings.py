@@ -163,7 +163,7 @@ STATICFILES_DIRS = (
 )
 
 
-recaptcha_key = ['SITE_KEY']
+recaptcha_key = config('SITE_KEY')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
