@@ -162,6 +162,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'portfolio/static/'),
 )
 
+
+recaptcha_key = ['SITE_KEY']
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # DEBUG_PROPAGATE_EXCEPTIONS = True
