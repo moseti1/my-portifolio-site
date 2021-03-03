@@ -16,8 +16,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY =  config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = ['https://kogoto.herokuapp.com/','127.0.0.1', '.herokuapp.com']
+DEBUG = config('DEBUG', default=True, cast=bool)
+ALLOWED_HOSTS = ['https://kogoto.herokuapp.com','127.0.0.1', '.herokuapp.com']
 
 CORS_ORIGIN_ALLOW_ALL = True # If this is used then `CORS_ORIGIN_WHITELIST` will not have any effect
 CORS_ALLOW_CREDENTIALS = True
@@ -172,3 +172,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 django_heroku.settings(config=locals(), staticfiles=False,logging=False)
+del DATABASES['default']['OPTIONS']['sslmode']
+
